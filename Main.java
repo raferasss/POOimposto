@@ -23,7 +23,7 @@ public class Main {
             ICMS icmsprod = new ICMS();
             Double valorcomIPI = ipiprod.calcular_IPI(prod1);
             Double valorcomICMS =  icmsprod.calcular_ICMS(prod1);
-            Double valortotal = valorcomICMS + valorcomIPI;
+            Double valortotal = valorcomICMS + valorcomIPI + prod1.valor;
             System.out.println("O valor da transação com o IPI e ICMS aplicados é de R$" + valortotal);
         }else if(Objects.equals(tipo, "serviços")) {
             System.out.println("Qual velor e nome do seu produto respectivamente?");
@@ -36,7 +36,7 @@ public class Main {
             ICMS icmsserv = new ICMS();
             Double valorcomISS = issserv.calcular_ISS(serv1);
             Double valorcomICMS =  icmsserv.calcular_ICMS(serv1);
-            Double valortotal = valorcomICMS + valorcomISS;
+            Double valortotal = valorcomICMS + valorcomISS + serv1.valor;
             System.out.println("O valor da transação com o ISS e ICMS aplicados é de R$" + valortotal);
         }
 
